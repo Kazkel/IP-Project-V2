@@ -72,6 +72,8 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") && Time.time > nextFire)
         {
+            mainCamera.GetComponent<CameraFollowScript>().shakeWeight = 0.08f;
+            mainCamera.GetComponent<CameraFollowScript>().shakeTimer = 0.1f;
             SoundManagerScript.PlaySound("fire");
             nextFire = Time.time + fireRate;
             fire();
@@ -152,7 +154,8 @@ public class PlayerController : MonoBehaviour
         {
             case "Enemy":
                 LoseLife();
-                mainCamera.GetComponent<CameraFollowScript>().shakeTimer = 0.5f;
+                mainCamera.GetComponent<CameraFollowScript>().shakeWeight = 0.5f;
+                mainCamera.GetComponent<CameraFollowScript>().shakeTimer = 0.3f;
                 break;
 
             
