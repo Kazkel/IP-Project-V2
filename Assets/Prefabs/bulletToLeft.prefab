@@ -131,5 +131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52046404ae78d5949b547b86a65cd07c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocityX: -10
+  velocityX: -16
   velocityY: 0
+  destroyTime: 5

@@ -6,6 +6,7 @@ public class BulletScript : MonoBehaviour {
 
     public float velocityX = 5f;
     public float velocityY = 0f;
+    public float destroyTime = 3f;
     Rigidbody2D rb;
 
 	// Use this for initialization
@@ -17,7 +18,7 @@ public class BulletScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         rb.velocity = new Vector2(velocityX, velocityY);
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, destroyTime);
 
 
 		

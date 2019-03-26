@@ -118,6 +118,7 @@ public class PlayerController : MonoBehaviour
                 Instantiate(blastToRight, bulletPos, Quaternion.identity);
                 Instantiate(blastToRight1, bulletPos, Quaternion.identity);
                 Instantiate(blastToRight2, bulletPos, Quaternion.identity);
+                
             }
         }
         else
@@ -132,6 +133,7 @@ public class PlayerController : MonoBehaviour
                 Instantiate(blastToLeft, bulletPos, Quaternion.identity);
                 Instantiate(blastToLeft1, bulletPos, Quaternion.identity);
                 Instantiate(blastToLeft2, bulletPos, Quaternion.identity);
+                
             }
         }
     }
