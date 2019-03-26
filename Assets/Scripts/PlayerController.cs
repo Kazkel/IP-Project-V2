@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 
 
     public GameObject bulletToRight, bulletToLeft, gameOverText,  winText, restartButton, blood, blastToRight,
-                      blastToRight1, blastToRight2, blastToLeft, blastToLeft1, blastToLeft2;    
+                      blastToRight1, blastToRight2, blastToLeft, blastToLeft1, blastToLeft2, mainCamera;    
 
     Vector2 bulletPos;
     public float fireRate = 0.5f;
@@ -152,6 +152,7 @@ public class PlayerController : MonoBehaviour
         {
             case "Enemy":
                 LoseLife();
+                mainCamera.GetComponent<CameraFollowScript>().shakeTimer = 0.5f;
                 break;
 
             

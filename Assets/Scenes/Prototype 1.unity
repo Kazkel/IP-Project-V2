@@ -3858,6 +3858,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &158647458 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2430133814713137377, guid: a2ec93b93b18bc2448cae001eeeec642,
+    type: 3}
+  m_PrefabInstance: {fileID: 719233257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &168994339
 GameObject:
   m_ObjectHideFlags: 0
@@ -16744,6 +16750,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1587996447}
+    - target: {fileID: 2430133814713137381, guid: a2ec93b93b18bc2448cae001eeeec642,
+        type: 3}
+      propertyPath: shakeWeight
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2ec93b93b18bc2448cae001eeeec642, type: 3}
 --- !u!1 &719665198
@@ -40295,6 +40306,7 @@ MonoBehaviour:
     type: 3}
   blastToLeft2: {fileID: 1171978173707648, guid: 0f7a1d6ff6c57b843b4af8a09639b957,
     type: 3}
+  mainCamera: {fileID: 158647458}
   fireRate: 0.5
 --- !u!58 &1587996451
 CircleCollider2D:
