@@ -18,9 +18,9 @@ public class CameraFollowScript : MonoBehaviour {
 	}
 	
 	// Updates the camera position to follow the player
-	void Update () {        
+	void LateUpdate () {        
         Vector3 targetPosition = new Vector3(target.transform.position.x + xOffset, target.transform.position.y + yOffset, transform.position.z);
-        transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * followLag);
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, Time.deltaTime * followLag);
         
 
         if(shakeTimer > 0) {
@@ -31,4 +31,6 @@ public class CameraFollowScript : MonoBehaviour {
         }
 		
 	}
+
+   
 }

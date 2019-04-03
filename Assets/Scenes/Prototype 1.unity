@@ -3733,7 +3733,12 @@ PrefabInstance:
     - target: {fileID: 2430133814713137381, guid: a2ec93b93b18bc2448cae001eeeec642,
         type: 3}
       propertyPath: followLag
-      value: 5
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430133814713137383, guid: a2ec93b93b18bc2448cae001eeeec642,
+        type: 3}
+      propertyPath: m_HDR
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2ec93b93b18bc2448cae001eeeec642, type: 3}
