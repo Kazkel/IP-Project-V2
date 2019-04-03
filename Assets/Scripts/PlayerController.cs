@@ -17,8 +17,7 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     bool onTheGround = false;
     public static int whichWeapon = 1;
-    public int lives = 3;
-    public Text livesText = null;
+    
     
 
 
@@ -79,6 +78,7 @@ public class PlayerController : MonoBehaviour
             nextFire = Time.time + fireRate;
             fire();
         }
+        
 
         
     }
@@ -151,7 +151,7 @@ public class PlayerController : MonoBehaviour
         //{
         //  SoundManagerScript.PlaySound("playerDeath");
         //gameOverText.SetActive(true);
-        //startButton.SetActive(true);
+        //restartButton.SetActive(true);
         //Instantiate(blood, transform.position, Quaternion.identity);
         //gameObject.SetActive(false);
 
@@ -159,13 +159,19 @@ public class PlayerController : MonoBehaviour
 
         switch (col.gameObject.tag)
         {
-            case "Enemy":
-                LoseLife();
+            case "Enemy":                
+                HealthBarScript.health -= 10f;
                 mainCamera.GetComponent<CameraFollowScript>().shakeWeight = 0.5f;
                 mainCamera.GetComponent<CameraFollowScript>().shakeTimer = 0.3f;
                 break;
 
-            
+            case "BigEnemy":
+                HealthBarScript.health -= 20f;
+                mainCamera.GetComponent<CameraFollowScript>().shakeWeight = 0.5f;
+                mainCamera.GetComponent<CameraFollowScript>().shakeTimer = 0.3f;
+                break;
+
+
 
         }
 
@@ -199,21 +205,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void LoseLife()
-    {
-
-        lives--;
-        livesText.text = ("Lives:" + lives);
-        if (lives == 0)
-        {
-
-            SoundManagerScript.PlaySound("playerDeath");
-            gameOverText.SetActive(true);
-            restartButton.SetActive(true);
-            Instantiate(blood, transform.position, Quaternion.identity);
-            gameObject.SetActive(false);
-
-        }
-    }
+    
 }
 

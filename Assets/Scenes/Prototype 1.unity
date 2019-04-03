@@ -1509,6 +1509,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7579835108958955471}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &284359618 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7579835108689615886, guid: a26317003f008c048a447773e9c5001d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7579835108958955471}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284359615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &307556253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7325,8 +7337,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   groundCheck: {fileID: 890181753}
-  lives: 3
-  livesText: {fileID: 1590482212}
   bulletToRight: {fileID: 1192713774426942, guid: 424d1d57f0d0d3642a599243a99632d9,
     type: 3}
   bulletToLeft: {fileID: 1171978173707648, guid: 1f0c95af2ede80b4cad79e6dd3cd3c8e,
@@ -7445,18 +7455,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallMultiplier: 2.3
   lowJumpMultiplier: 2.5
---- !u!114 &1590482212 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7579835109860487915, guid: a26317003f008c048a447773e9c5001d,
-    type: 3}
-  m_PrefabInstance: {fileID: 7579835108958955471}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1592530258 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: a038b284634e29f4aaf058814aa61a6f,
@@ -10519,7 +10517,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 7579835109020646264, guid: a26317003f008c048a447773e9c5001d,
+    - target: {fileID: 7579835108689615984, guid: a26317003f008c048a447773e9c5001d,
         type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -10634,25 +10632,13 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1587996450}
-    - target: {fileID: 7579835109930016857, guid: a26317003f008c048a447773e9c5001d,
-        type: 3}
-      propertyPath: m_Colors.m_NormalColor.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7579835109930016857, guid: a26317003f008c048a447773e9c5001d,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7579835109930016858, guid: a26317003f008c048a447773e9c5001d,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -199.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7579835109930016858, guid: a26317003f008c048a447773e9c5001d,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -66.1
+    - target: {fileID: 1709297970, guid: a26317003f008c048a447773e9c5001d, type: 3}
+      propertyPath: restartButton
+      value: 
+      objectReference: {fileID: 284359618}
+    - target: {fileID: 1709297970, guid: a26317003f008c048a447773e9c5001d, type: 3}
+      propertyPath: maxHealth
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a26317003f008c048a447773e9c5001d, type: 3}
