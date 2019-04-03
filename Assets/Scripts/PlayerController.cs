@@ -182,6 +182,7 @@ public class PlayerController : MonoBehaviour
         if (whichWeapon == 1)
         {
             whichWeapon = 2;
+
         }
         else
         {
