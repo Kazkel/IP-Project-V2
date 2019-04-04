@@ -18,7 +18,6 @@ public class RestartButtonScript : MonoBehaviour {
     //Loads the scene
     public void restartScene()
     {
-        ScoreScript.scoreValue = 0;
         SceneManager.LoadScene("Prototype 1");
     }
 }

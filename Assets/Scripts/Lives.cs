@@ -9,13 +9,13 @@ public class Lives : MonoBehaviour
 
 	public Text gameOver = null;
     public Text LivesText = null;
-	public int health = 100;
+	public int lives = 3;
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
-		health--;
-		LivesText.text = ("Health :" + health);
-		if (health == 0)
+		lives--;
+		LivesText.text = ("Lives :" + lives);
+		if (lives == 0)
 		{
 			Destroy(GameObject.Find("Player"));
 			gameOver.gameObject.SetActive(true);

@@ -17,8 +17,9 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     bool onTheGround = false;
     public static int whichWeapon = 1;
-    
-    
+    public int lives = 3;
+    public Text livesText = null;
+
 
 
     public GameObject bulletToRight, bulletToLeft, gameOverText,  winText, restartButton, blood, blastToRight,
@@ -33,14 +34,13 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {        
-
         gameOverText.SetActive(false);
         winText.SetActive(false);
         restartButton.SetActive(false);
 
         rigBody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        
+
     }
 
     // Update is called once per frame
@@ -78,7 +78,6 @@ public class PlayerController : MonoBehaviour
             nextFire = Time.time + fireRate;
             fire();
         }
-        
 
         
     }
@@ -109,15 +108,13 @@ public class PlayerController : MonoBehaviour
         bulletPos = transform.position;
         if (facingRight)
         {
-            bulletPos += new Vector2(+1f, 0.64f);
+            bulletPos += new Vector2(+1f, 0.7f);
             if (whichWeapon == 1)
             {
-                
                 Instantiate(bulletToRight, bulletPos, Quaternion.identity);
             }
             else
-            {
-                
+            {                
                 Instantiate(blastToRight, bulletPos, Quaternion.identity);
                 Instantiate(blastToRight1, bulletPos, Quaternion.identity);
                 Instantiate(blastToRight2, bulletPos, Quaternion.identity);
@@ -126,15 +123,13 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            bulletPos += new Vector2(-1f, 0.64f);
+            bulletPos += new Vector2(-1f, 0.7f);
             if (whichWeapon == 1)
             {
-                
                 Instantiate(bulletToLeft, bulletPos, Quaternion.identity);
             }
             else
             {
-                
                 Instantiate(blastToLeft, bulletPos, Quaternion.identity);
                 Instantiate(blastToLeft1, bulletPos, Quaternion.identity);
                 Instantiate(blastToLeft2, bulletPos, Quaternion.identity);
@@ -151,7 +146,7 @@ public class PlayerController : MonoBehaviour
         //{
         //  SoundManagerScript.PlaySound("playerDeath");
         //gameOverText.SetActive(true);
-        //restartButton.SetActive(true);
+        //startButton.SetActive(true);
         //Instantiate(blood, transform.position, Quaternion.identity);
         //gameObject.SetActive(false);
 
@@ -159,19 +154,13 @@ public class PlayerController : MonoBehaviour
 
         switch (col.gameObject.tag)
         {
-            case "Enemy":                
-                HealthBarScript.health -= 10f;
+            case "Enemy":
+                LoseLife();
                 mainCamera.GetComponent<CameraFollowScript>().shakeWeight = 0.5f;
                 mainCamera.GetComponent<CameraFollowScript>().shakeTimer = 0.3f;
                 break;
 
-            case "BigEnemy":
-                HealthBarScript.health -= 20f;
-                mainCamera.GetComponent<CameraFollowScript>().shakeWeight = 0.5f;
-                mainCamera.GetComponent<CameraFollowScript>().shakeTimer = 0.3f;
-                break;
-
-
+            
 
         }
 
@@ -193,7 +182,6 @@ public class PlayerController : MonoBehaviour
         if (whichWeapon == 1)
         {
             whichWeapon = 2;
-
         }
         else
         {
@@ -205,6 +193,21 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    
+    void LoseLife()
+    {
+
+        lives--;
+        livesText.text = ("Lives:" + lives);
+        if (lives == 0)
+        {
+
+            SoundManagerScript.PlaySound("playerDeath");
+            gameOverText.SetActive(true);
+            restartButton.SetActive(true);
+            Instantiate(blood, transform.position, Quaternion.identity);
+            gameObject.SetActive(false);
+
+        }
+    }
 }
 

@@ -61,8 +61,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5522310619106684477}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.32, y: -6.92, z: 0}
-  m_LocalScale: {x: 0.08332513, y: 0.08870094, z: 0.746641}
+  m_LocalPosition: {x: 17, y: -4.84, z: 0}
+  m_LocalScale: {x: 0.12, y: 0.12, z: 1}
   m_Children:
   - {fileID: 5522310617585766747}
   m_Father: {fileID: 0}
@@ -105,7 +105,7 @@ SpriteRenderer:
   m_SortingLayerID: 1679967611
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 40c68ef9a17065f4abbd34139868fec6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e7a7bd5505947f44ab05714eb7f803ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallMultiplier: 2.3
-  lowJumpMultiplier: 2.5
+  lowJumpMultiplier: 2
 --- !u!58 &5522310619106684417
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -179,20 +179,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b399133ed8f56444a477949ffe0f513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
-  jumpForce: 550
+  moveSpeed: 8
+  jumpForce: 500
   theGround:
     serializedVersion: 2
     m_Bits: 256
   groundCheck: {fileID: 5522310617585766747}
-  lives: 3
-  livesText: {fileID: 0}
   bulletToRight: {fileID: 1192713774426942, guid: 424d1d57f0d0d3642a599243a99632d9,
     type: 3}
   bulletToLeft: {fileID: 1171978173707648, guid: 1f0c95af2ede80b4cad79e6dd3cd3c8e,
     type: 3}
   gameOverText: {fileID: 0}
-  winText: {fileID: 0}
   restartButton: {fileID: 0}
   blood: {fileID: 1170183640604728, guid: f620403174632d241b3a696306313779, type: 3}
   blastToRight: {fileID: 1192713774426942, guid: 03dfdc04f6cef604f9b1889b1b8ae10f,
@@ -207,7 +204,6 @@ MonoBehaviour:
     type: 3}
   blastToLeft2: {fileID: 1171978173707648, guid: 0f7a1d6ff6c57b843b4af8a09639b957,
     type: 3}
-  mainCamera: {fileID: 0}
   fireRate: 0.5
 --- !u!95 &5522310619106684423
 Animator:
