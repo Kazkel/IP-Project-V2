@@ -3523,11 +3523,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 369286861558155022, guid: 44373914d52364c718efee4988aa4466,
-        type: 3}
-      propertyPath: m_UsedByEffector
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 369286861558155021, guid: 44373914d52364c718efee4988aa4466,
         type: 3}
       propertyPath: m_UseSideBounce
@@ -3542,6 +3537,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_UseOneWay
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 369286861558155022, guid: 44373914d52364c718efee4988aa4466,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44373914d52364c718efee4988aa4466, type: 3}
