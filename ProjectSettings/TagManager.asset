@@ -10,6 +10,7 @@ TagManager:
   - Platform
   - killzone
   - Win
+  - BigEnemy
   layers:
   - Default
   - TransparentFX

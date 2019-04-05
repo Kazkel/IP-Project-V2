@@ -7,10 +7,12 @@ public class EnemyScript : MonoBehaviour {
 
     public GameObject blood;
     public float moveSpeed = 3f;
-    
+    bool isRunning = false;
     Vector3 localScale;
     bool movingRight = false;
     Rigidbody2D rb;
+    Animator anim;
+
     public PowerUp powerUpTemplate = null;
 	public int health =10;
 
@@ -20,7 +22,8 @@ public class EnemyScript : MonoBehaviour {
 	void Start () {
         localScale = transform.localScale;
         rb = GetComponent<Rigidbody2D> ();
-        
+        anim = GetComponent<Animator>();
+
 
     }
 	
@@ -35,6 +38,7 @@ public class EnemyScript : MonoBehaviour {
 
         if (transform.position.x < GameObject.Find("Player").transform.position.x)
             movingRight = true;
+            isRunning = true;
 
         if (movingRight)
             moveRight();
@@ -43,7 +47,7 @@ public class EnemyScript : MonoBehaviour {
         else 
            moveLeft();
 
-
+        anim.SetBool("isRunning", isRunning);
 
     }
 
