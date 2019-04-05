@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 102255882796038050}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 18.5688, y: -4.9668, z: -0.296875}
-  m_LocalScale: {x: 0.018663384, y: 0.018947572, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -93,10 +93,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4317facd840bd48499f303f9d74743dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.01
+  speed: 1
   size: 1
   timeLeft: 3
-  player: {fileID: 0}
+  player: {fileID: 5522310619106684416, guid: 6c716f31ff4da2b428ad27896bf9766a, type: 3}
 --- !u!58 &2137300451138823215
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
     public Transform groundCheck;
     bool onTheGround = false;
     public static int whichWeapon = 1;
+	public float fireRate = 0.5f;
+	public float timeLeft = 3.0f;
+	
     
     
 
@@ -25,7 +28,7 @@ public class PlayerController : MonoBehaviour
                       blastToRight1, blastToRight2, blastToLeft, blastToLeft1, blastToLeft2, mainCamera;    
 
     Vector2 bulletPos;
-    public float fireRate = 0.5f;
+   
     float nextFire = 0.0f;
 
    
@@ -79,8 +82,19 @@ public class PlayerController : MonoBehaviour
             fire();
         }
         
+		
 
-        
+
+		
+		if (fireRate < 0.5f)
+        {
+			Invoke("fixShot", 3);
+		}
+            
+
+
+
+
     }
 
     void LateUpdate()
@@ -193,11 +207,13 @@ public class PlayerController : MonoBehaviour
         if (whichWeapon == 1)
         {
             whichWeapon = 2;
+			anim.SetInteger("whichWeapon", 2);
 
         }
         else
         {
             whichWeapon = 1; 
+			anim.SetInteger("whichWeapon", 1);
         }
 
         
@@ -205,6 +221,10 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    
+    public void fixShot()
+	{
+		fireRate=0.5f;
+
+	}
 }
 

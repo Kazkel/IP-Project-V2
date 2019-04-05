@@ -12,6 +12,8 @@ public class EnemyScript : MonoBehaviour {
     bool movingRight = false;
     Rigidbody2D rb;
     public PowerUp powerUpTemplate = null;
+	public int health =10;
+
 
 
 	// Use this for initialization
@@ -53,12 +55,19 @@ public class EnemyScript : MonoBehaviour {
             SoundManagerScript.PlaySound("enemyDeath");
             Instantiate(blood, transform.position, Quaternion.identity);
             Destroy(col.gameObject);
-            Destroy(gameObject);
-            int powerUp = (Random.Range(0, 20));
-            if (powerUp==7)
-            {
-                SpawnPowerUp();
-            }
+            
+			health = (health-10);
+			if (health == 0)
+			{
+				Destroy(gameObject);
+				int powerUp = (Random.Range(7, 7));
+				
+				if (powerUp==7)
+				{
+					SpawnPowerUp();
+					
+				}
+			}
         }
 
 
@@ -84,6 +93,9 @@ public class EnemyScript : MonoBehaviour {
     void SpawnPowerUp()
     {
         PowerUp powerUpClone = Instantiate(powerUpTemplate);
+
+		int angle =270;
+		powerUpClone.SetDirection(angle);
 
         powerUpClone.gameObject.SetActive(true);
 
