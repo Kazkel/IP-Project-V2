@@ -6,14 +6,16 @@ public class EnemyFollow : MonoBehaviour {
 
 	public float speed;
 	public float aggroRange;
+    Animator anim;
+    bool isRunning = false;
 
 	private Transform target;
 
 
 	void Start () 
 	{
-		
-		target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        anim = GetComponent<Animator>();
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 	
 	}
 
@@ -21,9 +23,17 @@ public class EnemyFollow : MonoBehaviour {
 	{
 		if(Vector2.Distance(transform.position, target.position) < aggroRange)
 		{
-			transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            isRunning = true;
+            anim.SetBool("isRunning", isRunning);
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
 		}
-	}
+        if (Vector2.Distance(transform.position, target.position) > aggroRange)
+        {
+            isRunning = false;
+            anim.SetBool("isRunning", isRunning);
+            
+        }
+    }
 	
 	
 	

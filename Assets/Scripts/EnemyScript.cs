@@ -6,13 +6,13 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour {
 
     public GameObject blood;
-    public float moveSpeed = 3f;
-    bool isRunning = false;
+    
+    public float moveSpeed = 3f;    
     Vector3 localScale;
     bool movingRight = false;
     Rigidbody2D rb;
     Animator anim;
-
+    bool isRunning = false;
     public PowerUp powerUpTemplate = null;
 	public int health =10;
 
@@ -29,8 +29,9 @@ public class EnemyScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
         
+        
+
         if (transform.position.x > GameObject.Find("Player").transform.position.x)
         {
             movingRight = false;
@@ -38,7 +39,7 @@ public class EnemyScript : MonoBehaviour {
 
         if (transform.position.x < GameObject.Find("Player").transform.position.x)
             movingRight = true;
-            isRunning = true;
+            
 
         if (movingRight)
             moveRight();
@@ -47,7 +48,9 @@ public class EnemyScript : MonoBehaviour {
         else 
            moveLeft();
 
-        anim.SetBool("isRunning", isRunning);
+        
+
+
 
     }
 

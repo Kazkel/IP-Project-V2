@@ -2632,6 +2632,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 102255882796038050, guid: f192289bf4eb2e741801bc929f3d6a56,
+        type: 3}
+      propertyPath: m_Name
+      value: PowerUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 102255882796038050, guid: f192289bf4eb2e741801bc929f3d6a56,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 102255882796038061, guid: f192289bf4eb2e741801bc929f3d6a56,
         type: 3}
       propertyPath: player
@@ -2651,16 +2661,6 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 102255882796038050, guid: f192289bf4eb2e741801bc929f3d6a56,
-        type: 3}
-      propertyPath: m_Name
-      value: PowerUp
-      objectReference: {fileID: 0}
-    - target: {fileID: 102255882796038050, guid: f192289bf4eb2e741801bc929f3d6a56,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 102255882796038063, guid: f192289bf4eb2e741801bc929f3d6a56,
         type: 3}
@@ -4520,7 +4520,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890181752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: -10.16, z: 0}
+  m_LocalPosition: {x: -1, y: -11, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1587996449}
@@ -7554,7 +7554,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1679967611
-  m_SortingLayer: 2
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 40c68ef9a17065f4abbd34139868fec6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
