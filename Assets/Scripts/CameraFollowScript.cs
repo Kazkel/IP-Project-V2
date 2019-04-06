@@ -16,7 +16,8 @@ public class CameraFollowScript : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Camera.main.orthographicSize = cameraSize;
+        gameObject.GetComponent<Camera>().orthographicSize = cameraSize; 
+        
 	}
 	
 	// Updates the camera position to follow the player
