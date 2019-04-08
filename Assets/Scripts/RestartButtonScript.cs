@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class RestartButtonScript : MonoBehaviour {
 
+    public int sceneIndex;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -19,6 +21,6 @@ public class RestartButtonScript : MonoBehaviour {
     public void restartScene()
     {
         ScoreScript.scoreValue = 0;
-        SceneManager.LoadScene("Prototype 1");
+        SceneManager.LoadScene(sceneIndex);
     }
 }

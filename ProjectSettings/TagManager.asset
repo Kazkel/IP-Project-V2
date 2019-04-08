@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Platform
+  - Bullet
+  - Enemy
+  - BigEnemy
+  - PixellateCamera
+  - killzone
+  - Win
+  - level2
   layers:
   - Default
   - TransparentFX

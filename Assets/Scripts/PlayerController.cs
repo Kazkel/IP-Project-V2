@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
     
 
 
-    public GameObject bulletToRight, bulletToLeft, gameOverText,  winText, restartButton, blood, blastToRight,
+    public GameObject bulletToRight, bulletToLeft, gameOverText,  winText, level2Text, level2Button, restartButton, restartLevelButton, blood, blastToRight,
                       blastToRight1, blastToRight2, blastToLeft, blastToLeft1, blastToLeft2, mainCamera;    
 
     Vector2 bulletPos;
@@ -193,7 +193,15 @@ public class PlayerController : MonoBehaviour
         {
             
             winText.SetActive(true);
-            restartButton.SetActive(true);            
+            restartLevelButton.SetActive(true);            
+            gameObject.SetActive(false);
+
+        }
+        if (col.gameObject.tag.Equals("level2"))
+        {
+
+            level2Text.SetActive(true);
+            level2Button.SetActive(true);
             gameObject.SetActive(false);
 
         }
