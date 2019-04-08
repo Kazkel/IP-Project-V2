@@ -4267,29 +4267,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be42a6133bff841ad88a2f56471abfe5, type: 3}
---- !u!1 &831908344 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1709297968, guid: a26317003f008c048a447773e9c5001d,
-    type: 3}
-  m_PrefabInstance: {fileID: 7579835108958955471}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &831908346
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 831908344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ff8dad74c1ace44c9d7905092052d3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  gameOver: {fileID: 8353941230114527847, guid: 55281b7fac8e02f4ba7d30a0f8f3f349,
-    type: 3}
-  restartButton: {fileID: 1711060126195642581, guid: b1630e38b59f71b4abc2bc6769c9149a,
-    type: 3}
 --- !u!4 &841540111 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5717053756212396820, guid: 38223cc5593374ec4b06ca9e23c11dfa,
@@ -4729,6 +4706,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7579835108958955471}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &990101899 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7579835108304856643, guid: a26317003f008c048a447773e9c5001d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7579835108958955471}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990101898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &998537847
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7838,6 +7827,7 @@ MonoBehaviour:
   level2Text: {fileID: 1679125297}
   level2Button: {fileID: 1543795645}
   restartButton: {fileID: 284359615}
+  restartLevelButton: {fileID: 0}
   blood: {fileID: 1170183640604728, guid: f620403174632d241b3a696306313779, type: 3}
   blastToRight: {fileID: 1192713774426942, guid: 03dfdc04f6cef604f9b1889b1b8ae10f,
     type: 3}
@@ -10567,12 +10557,12 @@ PrefabInstance:
     - target: {fileID: 5450375046992328707, guid: 116ba60e8339e654fb097b59416037e9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 149.81
+      value: 149.45
       objectReference: {fileID: 0}
     - target: {fileID: 5450375046992328707, guid: 116ba60e8339e654fb097b59416037e9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.627001
+      value: 5.67
       objectReference: {fileID: 0}
     - target: {fileID: 5450375046992328707, guid: 116ba60e8339e654fb097b59416037e9,
         type: 3}
@@ -10618,6 +10608,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450375046992328707, guid: 116ba60e8339e654fb097b59416037e9,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.187637
+      objectReference: {fileID: 0}
+    - target: {fileID: 5450375046992328707, guid: 116ba60e8339e654fb097b59416037e9,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.17671028
       objectReference: {fileID: 0}
     - target: {fileID: 5811607445554011787, guid: 116ba60e8339e654fb097b59416037e9,
         type: 3}
@@ -11346,6 +11346,23 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 1709297970, guid: a26317003f008c048a447773e9c5001d, type: 3}
+      propertyPath: blood
+      value: 
+      objectReference: {fileID: 1170183640604728, guid: 4051afe9436680345a62c1f0e7c154f2,
+        type: 3}
+    - target: {fileID: 1709297970, guid: a26317003f008c048a447773e9c5001d, type: 3}
+      propertyPath: gameOverText
+      value: 
+      objectReference: {fileID: 990101898}
+    - target: {fileID: 1709297970, guid: a26317003f008c048a447773e9c5001d, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1587996447}
+    - target: {fileID: 1709297970, guid: a26317003f008c048a447773e9c5001d, type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 990101899}
     - target: {fileID: 7579835108689615883, guid: a26317003f008c048a447773e9c5001d,
         type: 3}
       propertyPath: sceneIndex

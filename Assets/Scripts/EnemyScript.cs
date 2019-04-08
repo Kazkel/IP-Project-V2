@@ -59,14 +59,15 @@ public class EnemyScript : MonoBehaviour {
         if (col.gameObject.tag.Equals("Bullet"))
         {
             ScoreScript.scoreValue += 10;
-            SoundManagerScript.PlaySound("enemyDeath");
-            Instantiate(blood, transform.position, Quaternion.identity);
+            
             Destroy(col.gameObject);
             
 			health = (health-10);
 			if (health == 0)
 			{
-				Destroy(gameObject);
+                SoundManagerScript.PlaySound("enemyDeath");
+                Instantiate(blood, transform.position, Quaternion.identity);
+                Destroy(gameObject);
 				int powerUp = (Random.Range(7, 7));
 				
 				if (powerUp==7)
