@@ -1263,6 +1263,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 512x64 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 5717053756212396824, guid: 38223cc5593374ec4b06ca9e23c11dfa,
+        type: 3}
+      propertyPath: m_TagString
+      value: Platform
+      objectReference: {fileID: 0}
     - target: {fileID: 5717053756212396820, guid: 38223cc5593374ec4b06ca9e23c11dfa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12350,6 +12355,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 192x64 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3604987758255205200, guid: 1566c7245251c4aea956f111b3ea20a5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Platform
       objectReference: {fileID: 0}
     - target: {fileID: 3604987758255205204, guid: 1566c7245251c4aea956f111b3ea20a5,
         type: 3}
