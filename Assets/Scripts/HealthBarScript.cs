@@ -12,6 +12,7 @@ public class HealthBarScript : MonoBehaviour
     public Text gameOver = null;
     public Button restartButton = null;
     
+    
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class HealthBarScript : MonoBehaviour
         healthBar.fillAmount = health / maxHealth;
         if (health == 0)
         {
+            
             Destroy(GameObject.Find("Player"));
             gameOver.gameObject.SetActive(true);
             restartButton.gameObject.SetActive(true);
