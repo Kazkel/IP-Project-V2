@@ -9029,6 +9029,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 360388994}
     m_Modifications:
+    - target: {fileID: 1711060126195642580, guid: b1630e38b59f71b4abc2bc6769c9149a,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1711060126195642539, guid: b1630e38b59f71b4abc2bc6769c9149a,
         type: 3}
       propertyPath: m_Name
@@ -9038,11 +9043,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1711060126195642580, guid: b1630e38b59f71b4abc2bc6769c9149a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1711060127501189958, guid: b1630e38b59f71b4abc2bc6769c9149a,
         type: 3}
@@ -13500,7 +13500,7 @@ Camera:
   far clip plane: 999.98
   field of view: 60
   orthographic: 1
-  orthographic size: 12.8
+  orthographic size: 12.73
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
